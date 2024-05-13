@@ -1,0 +1,12 @@
+#!/bin/sh
+
+BASENAME="$1"
+
+if [ -z "$BASENAME" ]; then
+  echo "Usage: $0 <base_filename>"
+  exit 1
+fi
+
+latexmk "$BASENAME"
+
+latexmk -c "$BASENAME"

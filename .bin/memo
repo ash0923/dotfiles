@@ -1,0 +1,23 @@
+#!/bin/bash
+# memo - Opens a text file with today's date as its name with predefined headers.
+
+# Get today's date in YYYYMMDD format.
+today=$(date +%Y%m%d)
+
+# Define the directory where the memo files will be stored.
+memo_dir="$HOME/memos"
+
+# Create the memos directory if it doesn't exist.
+mkdir -p "$memo_dir"
+
+# Path to today's memo file.
+memo_file="$memo_dir/${today}.log"
+
+# Check if today's memo file already exists.
+if [ ! -f "$memo_file" ]; then
+  # If the file does not exist, create it with the headers.
+  echo -e "[Sanah]\n\n[Lab]\n\n[ARES]\n\n[SNIFFOUT]\n\n[Other]" > "$memo_file"
+fi
+
+# Open today's memo file in vim.
+vim "$memo_file"
