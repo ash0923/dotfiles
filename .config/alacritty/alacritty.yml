@@ -12,7 +12,6 @@ window:
     x: 0
     y: 0
 
-  decorations: full
   startup_mode: Windowed
   dynamic_title: true
 
@@ -22,6 +21,9 @@ window:
 
   ## Background opacity
   opacity: 1.0
+
+section:
+  save_to_clipboard: true
 
 ## Cursor
 cursor:
@@ -38,7 +40,8 @@ colors:
   # Default colors
   primary:
     # background: "0x222436"
-    background: "0x000000"
+    background:
+      "0x000000"
       #foreground: "0xc8d3f5"
 
   # Normal colors
@@ -61,7 +64,8 @@ colors:
     blue: "0x82aaff"
     magenta: "0xc099ff"
     cyan: "0x86e1fc"
-    white: "0xc8d3f5"
+    white:
+      "0xc8d3f5"
 
       #  indexed_colors:
       #    - { index: 16, color: "0xff966c" }
@@ -71,6 +75,6 @@ font:
   normal:
     family: Hack Nerd Font Mono
     style: Regular
-  size: 11
+  size: 12
 
 shell: zsh
